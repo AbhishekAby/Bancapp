@@ -1,0 +1,13 @@
+<div class="container">
+    <form [formGroup]="myForm">
+        <div class="input_wrap mt-3">
+            <input type="text" placeholder="Username" formControlName="username">
+            <input type="password" placeholder="Password" formControlName="password">
+            <button type="submit" (click)="validateForm()">Submit</button>
+        </div>
+
+        <div *ngIf="isSubmitted">
+            <span> Please enter valid input</span>
+        </div>
+    </form>
+</div>
